@@ -1,35 +1,34 @@
-import React from 'react'
-import BlogPost from '../components/BlogPost'
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import BlogPreview from '../components/BlogPreview'
 
-const dummyPosts = [
-  {
-    id: 1,
-    title: 'My cool new blog',
-    content: 'Blah blah blah blah',
-    author: 'Bob'
-  },
-  {
-    id: 2,
-    title: 'All you need to know about Jesus',
-    content: 'Blah blah blah blah',
-    author: 'Jesus'
-  },  
-  {
-    id: 3,
-    title: 'Jamar knows best!',
-    content: 'Blah blah blah blah',
-    author: 'Jamar'
-  },
-]
 
 export default function AllPosts() {
+  const [posts, setPosts] = useState([]);
+
+  async function getPosts() {
+    try {
+      const response = await axios.get("http://localhost:8080/posts");
+      // console.log(response);
+      setPosts(response.data);
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  useEffect(() => {
+    getPosts();
+  }, []);
+
   return (
-    <div>
-      <h2>All Posts</h2>
-      <p>hello</p>
-      {dummyPosts.map(post => (
-        <BlogPost post={post} key={post.id} />
-      ))}
+    <div className='page home'>
+      <div className="container flow">
+        <h2>All Posts</h2>
+        {/* output blogs from DB here */}
+        {posts.map(post => (
+          <BlogPreview post={post} key={post._id} />
+        ))}
+      </div>
     </div>
   )
 }

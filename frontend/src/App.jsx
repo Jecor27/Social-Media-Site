@@ -1,7 +1,5 @@
 import { Route, Routes, BrowserRouter } from "react-router-dom";
-import "./App.css"
 import { useState } from "react";
-
 
 // Components
 import Navbar from "./components/Navbar";
@@ -19,7 +17,6 @@ function App() {
   const [color, setColor] = useState("black")
   const [background, setBackground] = useState("white")
   
-
 
   return (
     

@@ -1,0 +1,33 @@
+/* Header & Nav */
+
+.header {
+  padding-block: var(--size-1);
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--size-1);
+
+}
+
+.nav-list {
+  display: flex;
+  gap: var(--size-1);
+}
+
+/* Blog Preview */
+
+.blog-preview {
+  border: 1px solid black;
+  padding: var(--size-0);
+}
+
+/* Forms */
+
+form {
+  width: 100%;
+  max-width: 30rem;
+  margin-inline: auto;
+}

@@ -19,12 +19,3 @@ export function setTextColor(){
     return Math.floor(Math.random() * 256);
   }
   
-  // setInterval(() => {
-  
-  //   let r = random();
-  //   let g = random();
-  //   let b = random(); 
-  
-  //   setColor(`rgb(${r},${g},${b})`)
-  
-  // }, 1000)

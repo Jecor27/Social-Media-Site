@@ -16,7 +16,7 @@ const CreatePost = () => {
 
   return (
     <div className="blog-form">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="flow">
         <div>
           <label>Title:</label>
           <input
