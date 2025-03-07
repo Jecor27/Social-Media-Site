@@ -3,11 +3,6 @@ import { Route, Routes, BrowserRouter } from "react-router-dom";
 function App() {
 
   return (
-<<<<<<< HEAD
-    <>
-  
-    </>
-=======
     <BrowserRouter>
     {/* navigation here */}
       <Routes>
@@ -18,7 +13,6 @@ function App() {
         <Route path="/posts/:id" element={<p>Post details</p>} />
       </Routes>
     </BrowserRouter>
->>>>>>> c2f12a9cbde30e42846c2b479d1d06fa6aaae79e
   )
 }
 
