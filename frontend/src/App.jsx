@@ -1,4 +1,7 @@
 import { Route, Routes, BrowserRouter } from "react-router-dom";
+import "./App.css"
+import { useState } from "react";
+
 
 // Components
 import Navbar from "./components/Navbar";
@@ -13,7 +16,14 @@ import BlogDetails from "./pages/BlogDetails";
 
 function App() {
 
+  const [color, setColor] = useState("black")
+  const [background, setBackground] = useState("white")
+  
+
+
   return (
+    
+    <div className="App" style={{color: color}}>
     <BrowserRouter>
       <Navbar />
       <Routes>
@@ -24,6 +34,7 @@ function App() {
         <Route path="/posts/:id" element={<BlogDetails />} />
       </Routes>
     </BrowserRouter>
+    </div>
   )
 }
 
