@@ -1,8 +1,18 @@
 import { Route, Routes, BrowserRouter } from "react-router-dom";
+import "./App.css"
+import { useState } from "react";
+
 
 function App() {
 
+  const [color, setColor] = useState("black")
+  const [background, setBackground] = useState("white")
+  
+
+
   return (
+    
+    <div className="App" style={{color: color}}>
     <BrowserRouter>
     {/* navigation here */}
       <Routes>
@@ -13,6 +23,7 @@ function App() {
         <Route path="/posts/:id" element={<p>Post details</p>} />
       </Routes>
     </BrowserRouter>
+    </div>
   )
 }
 
