@@ -1,0 +1,12 @@
+:root {
+  --container-max-width: 1080px;
+  --container-padding: var(--size-2)
+}
+
+.container {
+  --max-width: var(--container-max-width);
+  --padding: var(--container-padding);
+
+  width: min(var(--max-width), 100% - ( var(--padding) * 2) );
+  margin-inline: auto;
+}

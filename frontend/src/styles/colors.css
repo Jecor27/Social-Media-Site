@@ -1,0 +1,21 @@
+:root {
+
+  --clr-bg-400: hsl(213, 54.8%, 47%);
+
+  --clr-primary-500:  hsl(227, 60%, 25%);
+  --clr-primary-400:  hsl(227, 60%, 33%);
+
+  --clr-secondary-400: hsl(0, 87.5%, 59%);
+
+  --clr-neutral-1000: hsl(0, 0%, 0%);
+  --clr-neutral-900: hsl(0, 0%, 7.5%);
+  --clr-neutral-800: hsl(0, 0%, 17.5%);
+  --clr-neutral-700: hsl(0, 0%, 30%);
+  --clr-neutral-600: hsl(0, 0%, 40%);
+  --clr-neutral-500: hsl(0, 0%, 50%);
+  --clr-neutral-400: hsl(0, 0%, 60%);
+  --clr-neutral-300: hsl(0, 0%, 70%);
+  --clr-neutral-200: hsl(0, 0%, 82.5%);
+  --clr-neutral-100: hsl(0, 0%, 95%);
+  --clr-neutral-000: hsl(0, 0%, 100%);
+}

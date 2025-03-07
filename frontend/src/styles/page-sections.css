@@ -1,0 +1,97 @@
+/* Hero */
+.hero {
+  display: grid;
+  gap: var(--size-0);
+}
+
+.hero__image {
+  width: 18rem;
+  margin-inline: auto;
+}
+
+@media (min-width: 720px) {
+  .hero {
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+  }
+
+  .hero__image {
+    width: 30rem;
+  }
+}
+
+/* Info & Disciplines */
+.discipline {
+  display: grid;
+  gap: var(--size--1);
+}
+
+.discipline__title {
+  text-align: center;
+}
+
+.discipline__image img {
+  width: 16rem;
+  margin-inline: auto;
+}
+
+@media (min-width: 621px) {
+  .discipline {
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+  }
+
+  .discipline__title {
+    text-align: left;
+  }
+}
+
+/* Call to Action */
+.cta__image {
+  margin-inline: auto;
+  border: 2px solid var(--clr-neutral-000);
+  width: 40rem;
+}
+
+/* Testimonials */
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--size-3);
+}
+
+.testimonial {
+  --flow-spacer: var(--size--2);
+  width: 100%;
+  max-width: 30rem;
+}
+
+.testimonial__avatar {
+  border-radius: 50%;
+  max-width: 50%;
+}
+
+@media (min-width: 720px) {
+  .testimonial {
+    max-width: 18rem;
+  }
+}
+
+/* Lessons */
+.lessons__video {
+  max-width: 50rem;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.lessons__video > * {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* About */
+.about img {
+  width: 50rem;
+}
