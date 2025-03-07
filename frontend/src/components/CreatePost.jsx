@@ -16,7 +16,6 @@ const CreatePost = () => {
 
   return (
     <div className="blog-form">
-      <h2>Create a New Post</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label>Title:</label>

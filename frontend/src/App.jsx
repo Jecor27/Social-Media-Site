@@ -5,10 +5,10 @@ import Navbar from "./components/Navbar";
 
 // Pages
 import LoginPage from "./pages/LoginPage";
-// about is Soumya
+import AboutPage from "./pages/AboutPage";
 import CreateBlogPage from "./pages/CreateBlogPage";
 import AllPostsPage from "./pages/AllPostsPage";
-
+import BlogDetails from "./pages/BlogDetails";
 
 
 function App() {
@@ -18,10 +18,10 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<LoginPage />} />
-        <Route path="/about" element={<p>About</p>} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/posts" element={<AllPostsPage />} />
         <Route path="/posts/create" element={<CreateBlogPage />} />
-        <Route path="/posts/:id" element={<p>Post details</p>} />
+        <Route path="/posts/:id" element={<BlogDetails />} />
       </Routes>
     </BrowserRouter>
   )

@@ -1,28 +1,18 @@
+import { NavLink } from "react-router-dom"
 
-const Navbar = () => {
-    return(
-
-<div>
-<nav className="navbar">
-            <ul>
-            <li><a href="/login">Login</a></li>
-            <li><a href="/posts">Posts</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/createPost">Create Posts</a></li>
-            </ul>
- </nav>
-        <div>
-            <h1>Welcome to TBD</h1>
-
-            <p>Where nothing evr stays the same, and always changes</p>
-        </div>
-
-
-    )
-
-
-</div>
-
-    )}
-
-    export default Navbar
+export default function Navbar() {
+  return (
+    <header className="header">
+      <div className="header__inner | container">
+        <span className="logo">TwitTerrible</span>
+        <nav className="nav">
+          <ul className="nav-list">
+            <li><NavLink to="/posts">Home</NavLink></li>
+            <li><NavLink to="/posts/create">New Post</NavLink></li>
+            <li><NavLink to="/about">About</NavLink></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  )
+}
