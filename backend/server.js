@@ -11,9 +11,6 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-
-
-
 //Routes to have
 
 // GET /posts
@@ -81,6 +78,5 @@ app.put("/posts/:id", async (req, res) => {
 })
 
 //connection to the app and the database
-
 
 connectDB(app)
