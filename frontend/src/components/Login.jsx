@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { getRandomColor } from '../functions';
 
 export default function Login() {
   const [user, setUser] = useState("");
@@ -9,14 +10,14 @@ export default function Login() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='login-form'>
       <input 
         type="text" 
         placeholder="Enter your name" 
         value={user}
         onChange={(e) => setUser(e.target.value)}
       />
-      <button type='submit'>Submit</button>
+      <button style={{backgroundColor: getRandomColor(), color: getRandomColor()}} type='submit'>Login</button>
     </form>
   )
 }

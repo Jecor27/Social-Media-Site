@@ -1,5 +1,9 @@
 /* Header & Nav */
 
+.App {
+  height: 100vh;
+}
+
 .header {
   padding-block: var(--size-1);
 }
@@ -24,10 +28,55 @@
   padding: var(--size-0);
 }
 
+
+.all-posts {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
 /* Forms */
 
 form {
+  --flow-spacer: var(--size--2);
   width: 100%;
   max-width: 30rem;
   margin-inline: auto;
+}
+
+.create-blog > * {
+  display: block;
+  width: 100%;
+}
+
+.login-form {
+  display: flex;
+  gap: var(--size-0);
+}
+.login-form input {
+  flex-grow: 1;
+}
+.login-form button {
+  padding-inline: var(--size-1);
+}
+
+/* Buttons */
+
+button {
+  padding: var(--size--2);
+  border-radius: var(--border-radius);
+  border: none;
+}
+
+input, textarea {
+  padding: var(--size--2);
+  border-radius: var(--border-radius);
+  border: none;
+}
+
+/* Banner */
+
+.banner {
+  width: 100%;
+  max-width: 30rem;
+  border-radius: var(--border-radius)
 }

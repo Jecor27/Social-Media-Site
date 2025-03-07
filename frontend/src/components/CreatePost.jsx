@@ -1,23 +1,46 @@
 import { useState } from "react";
-//test
+import { getRandomColor } from "../functions";
+import { useNavigate } from "react-router-dom";
+
 const CreatePost = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault(); 
-    console.log("Title:", title);
-    console.log("Content:", content);
-    
-    // Reset form after submission 
-    setTitle("");
-    setContent("");
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+  
+    const postData = {
+        title,
+        content,
+        author: "toon anything"
+    };
+  
+    try {
+        const response = await fetch("http://localhost:8080/posts", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(postData),
+        });
+  
+        if (!response.ok) {
+            throw new Error('Error creating post');
+        }
+  
+        const data = await response.json();
+        // console.log('Post created:', data);
+        navigate(`/posts/${data._id}`)
+
+    } catch (error) {
+        console.error('Error creating post:', error);
+    }
   };
 
   return (
     <div className="blog-form">
-      <form onSubmit={handleSubmit} className="flow">
-        <div>
+      <form onSubmit={handleSubmit} className="create-blog flow" >
           <label>Title:</label>
           <input
             type="text"
@@ -26,8 +49,6 @@ const CreatePost = () => {
             onChange={(e) => setTitle(e.target.value)}
             required
           />
-        </div>
-        <div>
           <label>Content:</label>
           <textarea
             value={content}
@@ -35,11 +56,16 @@ const CreatePost = () => {
             onChange={(e) => setContent(e.target.value)}
             required
           />
-        </div>
-        <button type="submit">Make it public</button>
+
+        <button
+          type="submit"
+          style={{backgroundColor: getRandomColor(), color: getRandomColor()}}
+         >Make it public</button>
       </form>
     </div>
   );
 };
 
 export default CreatePost;
+
+

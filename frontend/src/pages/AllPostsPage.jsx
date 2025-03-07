@@ -24,10 +24,11 @@ export default function AllPosts() {
     <div className='page home'>
       <div className="container flow">
         <h2>All Posts</h2>
-        {/* output blogs from DB here */}
-        {posts.map(post => (
-          <BlogPreview post={post} key={post._id} />
-        ))}
+        <div className="all-posts flow">
+          {posts.map(post => (
+            <BlogPreview post={post} key={post._id} />
+          ))}
+        </div>
       </div>
     </div>
   )
