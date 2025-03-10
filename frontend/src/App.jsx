@@ -1,7 +1,5 @@
 import { Route, Routes, BrowserRouter } from "react-router-dom";
-import "./App.css"
-import { useState } from "react";
-
+import { getRandomColor } from "./functions";
 
 // Components
 import Navbar from "./components/Navbar";
@@ -13,29 +11,32 @@ import CreateBlogPage from "./pages/CreateBlogPage";
 import AllPostsPage from "./pages/AllPostsPage";
 import BlogDetails from "./pages/BlogDetails";
 
-
 function App() {
 
-  const [color, setColor] = useState("black")
-  const [background, setBackground] = useState("white")
-  
-
-
   return (
-    
-    <div className="App" style={{color: color}}>
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<LoginPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/posts" element={<AllPostsPage />} />
-        <Route path="/posts/create" element={<CreateBlogPage />} />
-        <Route path="/posts/:id" element={<BlogDetails />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="App" style={{backgroundColor: getRandomColor(), color: getRandomColor()}}>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<LoginPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/posts" element={<AllPostsPage />} />
+          <Route path="/posts/create" element={<CreateBlogPage />} />
+          <Route path="/posts/:id" element={<BlogDetails />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }
 
 export default App
+
+// Product Owner
+// - Bryan
+
+// Backend Team 
+// - Jesus & Wend
+
+// Frontend Team
+// - Toon, Iris, Jamar, Soumya
+

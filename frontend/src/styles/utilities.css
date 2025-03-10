@@ -1,0 +1,82 @@
+
+.page {
+  margin-block: var(--size-3);
+}
+
+.section-padding {
+  padding-block: var(--size-3);
+}
+
+.text-content {
+  max-width: 60ch;
+  margin-inline: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mx-auto {
+  margin-inline: auto;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.fs-italic {
+  font-style: italic;
+}
+
+.border-radius-1 {
+  border-radius: 0.5rem;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-spacer, var(--size-2));
+}
+
+.border-white {
+  border: 2px solid var(--clr-neutral-000);
+}
+
+/* Font Sizes */
+.fs--2 {
+  font-size: var(--size--2);
+}
+.fs--1 {
+  font-size: var(--size--1);
+}
+.fs-0 {
+  font-size: var(--size-0);
+}
+.fs-1 {
+  font-size: var(--size-1);
+}
+.fs-2 {
+  font-size: var(--size-2);
+}
+.fs-3 {
+  font-size: var(--size-3);
+}
+.fs-4 {
+  font-size: var(--size-4);
+}
+.fs-5 {
+  font-size: var(--size-5);
+}
+.fs-6 {
+  font-size: var(--size-6);
+}

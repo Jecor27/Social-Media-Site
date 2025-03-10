@@ -1,0 +1,19 @@
+:root {
+  --font-family-base: system-ui, sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: var(--size-4);
+}
+
+h2 {
+  font-size: var(--size-3);
+}
+
+h3 {
+  font-size: var(--size-2);
+}
